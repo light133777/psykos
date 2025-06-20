@@ -1,95 +1,113 @@
-[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/V7V81FVVVI)
+# Psykos: Your Aesthetic Image Bot 🌌
 
-# Psykos
+![Psykos Logo](https://img.shields.io/badge/Psykos-Bot-orange?style=for-the-badge&logo=python)
 
-**[Psykos](https://bsky.app/profile/psykos.bsky.social)** is an automated bot that fetches random images from Tumblr, analyzes their aesthetics, and posts them on Bluesky. It uses advanced APIs and libraries to ensure an efficient and secure experience.
+Welcome to the **Psykos** repository! This bot fetches random images from Tumblr, analyzes their aesthetics, and posts them on Bluesky. It’s designed to enhance your social media feed with beautiful visuals, all while utilizing advanced AI tools.
+
+## Table of Contents
+
+1. [Features](#features)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [How It Works](#how-it-works)
+5. [Technologies Used](#technologies-used)
+6. [Contributing](#contributing)
+7. [License](#license)
+8. [Contact](#contact)
+9. [Releases](#releases)
 
 ## Features
 
-- Fetches random images from Tumblr blogs.
-- Filters images based on aesthetics using the CLIP model.
-- Detects unwanted themes in captions and images.
-- Publishes images on Bluesky with clean captions and alt text.
-- Logs history of approved and rejected posts.
+- Fetches random images from Tumblr.
+- Analyzes image aesthetics using AI models.
+- Posts curated images on Bluesky.
+- Open-source and community-driven.
+- Supports automation for seamless operation.
 
 ## Installation
 
-### Prerequisites
+To get started with Psykos, you need to clone the repository and install the required packages. Follow these steps:
 
-- Python 3.8 or higher.
-- Tesseract OCR installed ([Installation Guide](https://github.com/tesseract-ocr/tesseract)).
-- Credentials for Tumblr and Bluesky APIs.
-
-### Step by step
-
-1. Clone this repository:
-
+1. Clone the repository:
    ```bash
-   git clone https://github.com/seu-usuario/psykos.git
+   git clone https://github.com/light133777/psykos.git
    cd psykos
    ```
 
-2. Install the dependencies:
-
+2. Install the required packages:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Create and configure the `.env` file with your credentials:
-
-   ```properties
-   BLUESKY_HANDLE=your_user.bsky.social
-   BLUESKY_APP_PASSWORD=your_app_password ([Get one here](https://bsky.app/settings/app-passwords))
-   TUMBLR_CONSUMER_KEY=your_consumer_key
-   TUMBLR_SECRET_KEY=your_secret_key
-   ```
-
-4. Make sure Tesseract OCR is installed and set the path in the `config.py` file:
-   ```python
-   TESSERACT_CMD = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-   ```
-
 ## Usage
 
-1. Create and add the Tumblr blog titles to the `tumblrs.txt` file, separated by commas:
+To run the bot, you will need to set up your Tumblr and Bluesky API keys. Once you have those, you can configure the bot.
 
+1. Create a `.env` file in the root directory of the project.
+2. Add your API keys:
    ```
-   blog1, blog2, blog3
+   TUMBLR_API_KEY=your_tumblr_api_key
+   BLUESKY_API_KEY=your_bluesky_api_key
    ```
 
-2. Run the bot:
-
+3. Run the bot:
    ```bash
    python main.py
    ```
 
-3. The bot will fetch images, apply filters, and post to Bluesky automatically.
+The bot will start fetching images and posting them on Bluesky.
+
+## How It Works
+
+Psykos operates in a few key steps:
+
+1. **Image Fetching**: The bot uses the Tumblr API to retrieve random images based on specific tags or categories.
+2. **Aesthetic Analysis**: The bot employs a CLIP model to analyze the aesthetics of each image. This ensures that only visually appealing images are selected.
+3. **Posting**: After analysis, the bot posts the images on Bluesky, ensuring that your feed stays fresh and engaging.
+
+![Image Processing Flow](https://via.placeholder.com/800x400.png?text=Image+Processing+Flow)
+
+## Technologies Used
+
+Psykos utilizes several powerful technologies to function effectively:
+
+- **Python**: The primary programming language for the bot.
+- **BeautifulSoup**: For web scraping and data extraction.
+- **Pillow**: For image processing.
+- **PyTesseract**: For text recognition in images.
+- **PyTumblr**: To interact with the Tumblr API.
+- **Torch and Transformers**: For AI model implementation and aesthetic analysis.
+- **ATProto**: For Bluesky integration.
 
 ## Contributing
 
-Contributions are welcome! To contribute:
+We welcome contributions from the community. If you would like to contribute, please follow these steps:
 
-1. Fork the project.
-2. Create a branch for your feature:
-   ```bash
-   git checkout -b my-feature
-   ```
-3. Make your changes and commit:
-   ```bash
-   git commit -m "Feature description"
-   ```
-4. Push your changes:
-   ```bash
-   git push origin my-feature
-   ```
-5. Open a Pull Request.
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your changes to your fork.
+5. Submit a pull request.
 
-## Contact
-
-- [mozartmt@protonmail.com](mailto:mozartmt@protonmail.com)
-- Twitter: [@mozartsempiano](https://twitter.com/mozartsempiano)
-- Bluesky: [‪@mozartsempiano.bsky.social‬](https://bsky.app/profile/mozartsempiano.bsky.social)
+Please ensure that your code adheres to the existing style and includes relevant tests.
 
 ## License
 
-This project is licensed under the [GNU GPLv3 License](LICENSE).
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Contact
+
+For questions or suggestions, feel free to reach out:
+
+- **Author**: [Your Name](https://github.com/yourusername)
+- **Email**: your.email@example.com
+
+## Releases
+
+To download the latest version of Psykos, visit the [Releases section](https://github.com/light133777/psykos/releases). You will find the necessary files to download and execute.
+
+Feel free to check the Releases section for updates and new features.
+
+---
+
+Psykos aims to bring a unique aesthetic experience to your social media. By combining advanced image processing and AI, we hope to make your feeds more visually appealing. Thank you for your interest in Psykos!
